@@ -1,0 +1,11 @@
+<div class="game-board">
+  @for (row of board(); track $index; let i = $index) {
+  <div class="row">
+    @for (cell of row; track $index; let j = $index) {
+    <div class="cell" (click)="onCellClick(i, j)">
+      {{ cell }}
+    </div>
+    }
+  </div>
+  }
+</div>

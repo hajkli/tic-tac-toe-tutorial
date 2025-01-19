@@ -1,0 +1,13 @@
+<div class="game-container">
+  <h1>Tic Tac Toe Game</h1>
+  <app-game-board
+    [board]="board()"
+    (cellClick)="makeMove($event.row, $event.col)"
+  ></app-game-board>
+  <app-game-info
+    [currentPlayer]="currentPlayer()"
+    [winner]="winner()"
+    (resetGame)="resetGame()"
+  ></app-game-info>
+  <app-button (click)="resetGame()">Restart Game</app-button>
+</div>

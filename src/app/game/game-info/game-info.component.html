@@ -1,0 +1,14 @@
+<div class="game-info">
+  @if (winner()) {
+  <p>Winner: {{ winner() }}</p>
+  } @else {
+  <p>Current Player: {{ currentPlayer() }}</p>
+  } @if(winner() !== null){
+
+  <app-modal
+    title="Winner"
+    [message]="'Player ' + winner() + ' won the game!'"
+    (modalClose)="onResetGame()"
+  ></app-modal>
+  }
+</div>
